@@ -1,0 +1,18 @@
+%%-*- mode: erlang -*-
+{application, zeta,
+ [
+  {description, "Riemann client"},
+  {vsn, git},
+  {modules, []},
+
+  {registered, [zeta]},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+
+  {mod, {zeta, []}},
+  {env, [
+	 {clients, [{default, {{127,0,0,1}, 5555, {keepalive, 5000}}}]}
+	]}
+ ]}.
